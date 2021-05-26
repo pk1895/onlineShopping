@@ -61,6 +61,9 @@ const MainHeader = (props) => {
             <li>
               {isLoggedIn && <Link to='/home'>Main Section</Link>}
             </li>
+            <li>
+              {isLoggedIn && <Link to='/orders'>Orders</Link>}
+            </li>
             {isLoggedIn && <li>
               <button className={classes.logoutbutton} onClick={onLogOut} >Log Out</button>
             </li>}

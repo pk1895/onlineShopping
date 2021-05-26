@@ -8,6 +8,7 @@ const SignUp = React.lazy(() => import('./Pages/Authentication/SignUp'));
 const SubSection = React.lazy(() => import('./components/Sections/SubSection'));
 const Home = React.lazy(() => import('./Pages/Home/Home'));
 const MainHeader = React.lazy(() => import('./components/Layout/MainHeader'));
+const Orders = React.lazy(() => import('./components/Orders/Orders'));
 
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.userData.isLoggedIn);
@@ -26,6 +27,9 @@ function App() {
           {isLoggedIn && <Home />}
           {!isLoggedIn && <Redirect to='/login' />}
         </Route>
+        <Route path='/orders'>
+          {isLoggedIn && <Orders />}
+        </Route>
         <Route path='/login'>
           <LogIn />
         </Route>
@@ -36,6 +40,7 @@ function App() {
           {isLoggedIn && <SubSection />}
           {!isLoggedIn && <Redirect to='/login' />}
         </Route>
+        
         <Route path='*'>
           <Redirect to='/' />
         </Route>

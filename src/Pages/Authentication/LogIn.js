@@ -8,8 +8,8 @@ import classes from './LogIn.module.css';
 
 const LogIn = () => {
     const dispatch = useDispatch();
-    const [enteredEmail, setEnteredEmail] = useState('');
-    const [enteredPass, setEnteredPass] = useState('');
+    const [enteredEmail, setEnteredEmail] = useState('pn@test.com');
+    const [enteredPass, setEnteredPass] = useState('12345678');
     const history = useHistory();
     const [isLoading, setIsLoading] = useState(false);
     
