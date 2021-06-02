@@ -9,7 +9,6 @@ const Orders = () => {
     const history = useHistory();
     const [isLoading, setIsLoading] = useState(false);
     const [ordersData, setOrdersData] = useState([]);
-    // const [newElement, setNewElement] = useState(false);
     const userId = useSelector((state) => state.auth.userData.userId);
 
     useEffect(() => {
